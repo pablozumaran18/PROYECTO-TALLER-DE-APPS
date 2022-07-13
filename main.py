@@ -1,4 +1,5 @@
 from cProfile import label
+from msilib.schema import Font
 from tkinter import ttk
 from tkinter import messagebox
 from tkinter import *
@@ -30,9 +31,12 @@ cajaTexto = tkinter.Entry(root, font= "helvetica 30")
 cajaTexto.pack()
 
 #con esto se usa lo que se escribe en la caja de texto y renderizarlo en la etiqueta
+
+cajaTextoo = StringVar
+
 def textoCaja():
     texto = cajaTexto.get()
-    etiqueta["text"]=texto
+    Listbox.insert(0,("maquina modelo ", cajaTextoo))
 #------------#
 
 boton= tkinter.Button(root,text="presionar" , command = textoCaja)
@@ -41,13 +45,19 @@ boton= tkinter.Button(root,text="presionar" , command = textoCaja)
 
 #boton.grid(row = 0,column = 1)
 
+
+
+
+Listbox = Listbox(root,font="arial 20")
+Listbox.place(relx=0.01,rely=0.2,relwidth=0.9,relheight=0.7)
 boton.pack()
 
 
 
+modelo= Entry(root)
 
 
-
+ 
 # Variables
 
 
